@@ -54,6 +54,24 @@
     <filter-name>shiroFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+
+
+
+  <filter>
+    <display-name>CrossFilter</display-name>
+    <filter-name>CrossFilter</filter-name>
+    <filter-class>com.zlq.hs.filter.SimpleCORSFilter</filter-class>
+    <init-param>
+      <param-name>IsCross</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CrossFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
   
   <welcome-file-list>
     <welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
